@@ -1,0 +1,26 @@
+name: Compilador para lenguaje C
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v3
+
+    - name: Set up GCC
+      run: sudo apt-get install -y build-essential
+
+    - name: Compile the C program
+      run: gcc main.c -o main.exe
+
+    - name: Run the program
+      run: ./main.exe
