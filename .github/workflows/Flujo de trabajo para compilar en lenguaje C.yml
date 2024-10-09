@@ -1,5 +1,10 @@
 name: Compilador para lenguaje C
 
+runs:
+  using: 'node20'
+  main: 'index.js'
+  post: 'cleanup.js'
+
 on:
   push:
     branches:
