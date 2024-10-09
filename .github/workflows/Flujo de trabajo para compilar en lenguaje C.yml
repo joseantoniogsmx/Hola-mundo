@@ -1,4 +1,4 @@
-name: C Compiler
+name: Compilador para lenguaje C
 
 on:
   push:
